@@ -1,0 +1,26 @@
+$kind: http-request
+url: "{{baseUrl}}/customers"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "phone": "9876543210",
+      "address": "123 Main Street",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "postalCode": "600001"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("Status is successful", function () { pm.expect(pm.response.code).to.be.oneOf([200, 201]); });
+      const data = pm.response.json();
+      if (data.id !== undefined) pm.collectionVariables.set("customerId", String(data.id));
+    language: text/javascript
+order: 1000

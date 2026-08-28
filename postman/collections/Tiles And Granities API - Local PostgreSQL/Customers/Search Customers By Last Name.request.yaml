@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{baseUrl}}?lastName=Doe"
+method: GET
+queryParams:
+  lastName: Doe
+order: 6000

@@ -1,0 +1,27 @@
+$kind: http-request
+url: http://localhost:8080/api/tiles
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "tileCode": "TILE-001",
+      "name": "Royal White Tile",
+      "description": "Sample tile for API testing",
+      "size": "600x600",
+      "color": "White",
+      "material": "Ceramic",
+      "price": 899.99,
+      "stock": 100,
+      "finishType": "Glossy"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("HTTP status is successful", function () { pm.expect(pm.response.code).to.be.oneOf([200, 201]); });
+      const data = pm.response.json();
+      if (data.id !== undefined) pm.collectionVariables.set("tileId", String(data.id));
+    language: text/javascript
+order: 1000

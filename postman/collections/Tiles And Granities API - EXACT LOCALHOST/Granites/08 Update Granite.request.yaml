@@ -1,0 +1,21 @@
+$kind: http-request
+url: http://localhost:8080/api/granites/{{graniteId}}
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "graniteCode": "GRANITE-001",
+      "name": "Black Galaxy",
+      "description": "Sample granite for API testing",
+      "origin": "India",
+      "color": "Black",
+      "pattern": "Galaxy",
+      "price": 2499.99,
+      "quantity": 50,
+      "finishType": "Polished",
+      "thickness": 20.0
+    }
+order: 8000

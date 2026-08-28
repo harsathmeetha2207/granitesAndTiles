@@ -1,0 +1,23 @@
+$kind: http-request
+url: http://localhost:8080/api/orders
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "orderNumber": "ORD-001",
+      "customerId": "{{customerId}}",
+      "totalAmount": 3399.98,
+      "status": "PENDING",
+      "notes": "Sample order for API testing"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("HTTP status is successful", function () { pm.expect(pm.response.code).to.be.oneOf([200, 201]); });
+      const data = pm.response.json();
+      if (data.id !== undefined) pm.collectionVariables.set("orderId", String(data.id));
+    language: text/javascript
+order: 1000

@@ -1,0 +1,16 @@
+$kind: http-request
+url: http://localhost:8080/api/orders/{{orderId}}
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "orderNumber": "ORD-001",
+      "customerId": "{{customerId}}",
+      "totalAmount": 3399.98,
+      "status": "CONFIRMED",
+      "notes": "Updated sample order"
+    }
+order: 7000

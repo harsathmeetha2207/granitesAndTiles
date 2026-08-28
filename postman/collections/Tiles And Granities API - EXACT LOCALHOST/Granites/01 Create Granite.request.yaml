@@ -1,0 +1,28 @@
+$kind: http-request
+url: http://localhost:8080/api/granites
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "graniteCode": "GRANITE-001",
+      "name": "Black Galaxy",
+      "description": "Sample granite for API testing",
+      "origin": "India",
+      "color": "Black",
+      "pattern": "Galaxy",
+      "price": 2499.99,
+      "quantity": 50,
+      "finishType": "Polished",
+      "thickness": 20.0
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("HTTP status is successful", function () { pm.expect(pm.response.code).to.be.oneOf([200, 201]); });
+      const data = pm.response.json();
+      if (data.id !== undefined) pm.collectionVariables.set("graniteId", String(data.id));
+    language: text/javascript
+order: 1000

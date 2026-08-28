@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{baseUrl}}"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "orderNumber": "ORD-001",
+      "customerId": 1,
+      "totalAmount": 3399.98,
+      "status": "PENDING",
+      "notes": "Sample order for API testing"
+    }
+order: 1000

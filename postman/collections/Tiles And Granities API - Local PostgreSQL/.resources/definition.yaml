@@ -1,0 +1,14 @@
+$kind: collection
+description: Complete Postman collection generated from the uploaded Spring Boot project. Base URL uses http://localhost:8080/api.
+variables:
+  baseUrl: http://localhost:8080/api
+  customerId: "1"
+  productId: "1"
+  tileId: "1"
+  graniteId: "1"
+  orderId: "1"
+  customerEmail: john.doe@example.com
+  productCode: PROD-001
+  tileCode: TILE-001
+  graniteCode: GRANITE-001
+  orderNumber: ORD-001

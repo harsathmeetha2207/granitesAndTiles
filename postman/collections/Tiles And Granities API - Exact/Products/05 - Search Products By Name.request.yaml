@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{baseUrl}}/products/search?name=Premium"
+method: GET
+queryParams:
+  name: Premium
+order: 5000

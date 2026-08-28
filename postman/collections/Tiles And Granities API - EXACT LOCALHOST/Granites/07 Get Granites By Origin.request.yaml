@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:8080/api/granites/origin/India
+method: GET
+order: 7000

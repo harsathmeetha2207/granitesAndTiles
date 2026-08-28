@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{baseUrl}}/customers/city/Chennai"
+method: GET
+order: 7000

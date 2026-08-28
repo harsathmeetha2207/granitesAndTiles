@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:8080/api/tiles/material/Ceramic
+method: GET
+order: 7000

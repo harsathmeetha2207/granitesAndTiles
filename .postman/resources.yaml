@@ -1,0 +1,17 @@
+# Use this workspace to collaborate
+workspace:
+  id: a4f2aba0-01bb-4ab9-8d21-0a30fd3b205a
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../postman/collections/Tiles And Granities API - Local PostgreSQL: b3b6099c-8a45-4834-ab7d-051eb324ecb1
+    ../postman/collections/Tiles And Granities API - Exact: e3729674-cea6-4444-9329-a0d4ff46a30b
+    ../postman/collections/Tiles And Granities API - EXACT LOCALHOST: 40473df3-7f16-46a8-b2dc-c1dfe2c2743e
+
+# All resources in the `postman/` folder are automatically registered in Local View.
+# Point to additional files outside the `postman/` folder to register them individually. Example:
+#localResources:
+#  collections:
+#    - ../tests/E2E Test Collection/

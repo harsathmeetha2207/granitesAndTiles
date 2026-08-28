@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:8080/api/tiles/search?name=Royal
+method: GET
+queryParams:
+  name: Royal
+order: 5000

@@ -1,0 +1,8 @@
+$kind: collection
+description: Generated directly from the uploaded CustomerController, ProductController, TileController, GraniteController, OrderController and DTOs. Every request contains the full localhost URL. No baseUrl is required.
+variables:
+  customerId: "1"
+  productId: "1"
+  tileId: "1"
+  graniteId: "1"
+  orderId: "1"

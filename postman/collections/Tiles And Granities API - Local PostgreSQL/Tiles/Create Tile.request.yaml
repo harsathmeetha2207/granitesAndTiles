@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{baseUrl}}"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "tileCode": "TILE-001",
+      "name": "Royal White Tile",
+      "description": "Sample tile for API testing",
+      "size": "600x600",
+      "color": "White",
+      "material": "Ceramic",
+      "price": 899.99,
+      "stock": 100,
+      "finishType": "Glossy"
+    }
+order: 1000

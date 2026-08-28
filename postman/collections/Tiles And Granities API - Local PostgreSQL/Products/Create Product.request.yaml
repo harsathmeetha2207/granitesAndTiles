@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{baseUrl}}"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "productCode": "PROD-001",
+      "name": "Premium Tile Adhesive",
+      "description": "Sample product for API testing",
+      "price": 499.99,
+      "quantity": 100,
+      "type": "ADHESIVE"
+    }
+order: 1000

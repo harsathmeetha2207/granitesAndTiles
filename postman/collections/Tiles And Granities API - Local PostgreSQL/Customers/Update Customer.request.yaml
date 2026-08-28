@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{baseUrl}}"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "firstName": "John Updated",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "phone": "9876543210",
+      "address": "123 Main Street",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "postalCode": "600001"
+    }
+order: 8000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{baseUrl}}/tiles/color/White"
+method: GET
+order: 6000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:8080/api/granites/{{graniteId}}
+method: DELETE
+order: 9000

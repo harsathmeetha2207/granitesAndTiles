@@ -1,0 +1,24 @@
+$kind: http-request
+url: http://localhost:8080/api/products
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "productCode": "PROD-001",
+      "name": "Premium Tile Adhesive",
+      "description": "Sample product for API testing",
+      "price": 499.99,
+      "quantity": 100,
+      "type": "ADHESIVE"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("HTTP status is successful", function () { pm.expect(pm.response.code).to.be.oneOf([200, 201]); });
+      const data = pm.response.json();
+      if (data.id !== undefined) pm.collectionVariables.set("productId", String(data.id));
+    language: text/javascript
+order: 1000

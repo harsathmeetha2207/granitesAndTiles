@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{baseUrl}}/tiles/{{tileId}}"
+method: DELETE
+order: 9000
